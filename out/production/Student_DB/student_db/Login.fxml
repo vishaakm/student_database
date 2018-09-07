@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="student_db.LoginController">
+   <children>
+      <AnchorPane layoutY="35.0" prefHeight="365.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #BDBDBD;">
+         <children>
+            <AnchorPane layoutX="100.0" layoutY="83.0" prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #C5CAE9;">
+               <children>
+                  <Label layoutX="41.0" layoutY="53.0" text="Username :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="tf_user" focusColor="#3f51b5" layoutX="148.0" layoutY="48.0" prefHeight="30.0" prefWidth="157.0" promptText="username">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label layoutX="41.0" layoutY="105.0" text="Password :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXPasswordField fx:id="pf_pass" focusColor="#3f51b5" layoutX="148.0" layoutY="103.0" prefHeight="25.0" prefWidth="157.0" promptText="password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton fx:id="btn_login" buttonType="RAISED" layoutX="173.0" layoutY="156.0" onAction="#handleButtonAction" style="-fx-background-color: #303F9F;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <Label layoutX="263.0" layoutY="23.0" text="Login" textFill="#212121">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="error_msg" layoutX="208.0" layoutY="310.0" text="Incorrect Username or Password !!!" textFill="#f44336" visible="false" />
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="35.0" prefWidth="600.0" style="-fx-background-color: #303F9F;">
+         <children>
+            <JFXButton fx:id="btn_close" layoutX="560.0" layoutY="5.0" onAction="#handleButtonAction">
+               <graphic>
+                  <MaterialDesignIconView accessibleRole="BUTTON" fill="WHITE" glyphName="CLOSE" size="18" />
+               </graphic>
+            </JFXButton>
+            <Label layoutX="234.0" layoutY="9.0" text="STUDENT DATABASE" textFill="WHITE" underline="true">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="DNS" size="16" />
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
